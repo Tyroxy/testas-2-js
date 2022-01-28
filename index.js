@@ -42,7 +42,6 @@ console.log('*************************************')
 
 let sk2 = 0;
 for (i = 0; i <= 10; i++) {
-    //sk1 += i;
 if (i % 2 === 0) {
     sk2 = i
     console.log(i)
@@ -51,6 +50,14 @@ if (i % 2 === 0) {
   
 console.log('*************************************')
 
+// 4. Naudojant ciklą, sugeneruoti penkis atsitiktinius skaičius nuo 1 iki 10. Išvesti juos konsolėje. (5 taškai)
 
 
-
+const sk4 = 5;
+let ir = 0;
+let rn = 0;
+while (0 < rn < 11  && ir < sk4) {
+rn = Math.random();
+console.log(`${ir} ${rn}`)
+ir++;
+}
