@@ -32,7 +32,7 @@ if (a === b) {
  console.log(`a lygu b arba ${a} = ${b}.`);
 }
 
-console.log('***************')
+console.log('--------------------------------');
 
 
 function compare(a, b) {
@@ -55,11 +55,6 @@ function compare(a, b) {
 console.log(compare(7, 6));
 
 
-
-
-
-
-
 console.log('*********---2. uzdavinys---***********')
 
 // 2. Naudojant ciklą, išvesti į konsolę skaičius nuo 1 iki 10. (5 taškai)
@@ -72,9 +67,16 @@ for (i = 1; i <= 10; i++) {
     console.log(i)
 
 }
-console.log('***************')
+console.log('--------------------------------');
 
-console.log(za)
+console.log(`Atsitiktiniu skaiciu eile masyve: `, za)
+console.log('--------------------------------');
+
+
+for (let i=1;i<11;i++){
+    console.log(i);
+}
+
 
 console.log('*********---3. uzdavinys---***********')
 
@@ -90,9 +92,14 @@ if (i % 2 === 0) {
 }
 }
 
-console.log('***************')
+console.log('--------------------------------');
 
 console.log(ra)
+
+console.log('--------------------------------');
+for(let i=0;i<11;i++){
+    console.log(i++);
+}
   
 console.log('*********---4. uzdavinys---***********')
 
@@ -108,9 +115,16 @@ pa.push(rn)
 console.log(`${i+1} ${rn}`)
 }
 
-console.log('***************')
+console.log('--------------------------------');
 
-console.log(pa)
+console.log(`Atsitiktiniu skaiciu eile masyve: `, pa)
+
+console.log('--------------------------------');
+
+for(let i=0;i<5;i++){
+    console.log(Math.floor((Math.random() * 11)));
+}
+
 
 console.log('*********---5. uzdavinys---***********')
 
@@ -128,102 +142,257 @@ if (rm === 5) {
     } 
 }
 
-console.log('***************')
+console.log('--------------------------------');
 
-console.log(na)
+console.log(`Atsitiktiniu skaiciu eile masyve: `, na)
+
+console.log('--------------------------------');
+
+for(let a=0;a!=5;){
+    a=Math.floor(Math.random() * 10);
+    console.log(a);
+}
 
 console.log('*********---6. uzdavinys---***********')
 
 
 // 6. Sukurti masyvą, kurio ilgis būtų nuo 20 iki 30, o reikšmės būtų skaičiai nuo 10 iki 30. Surasti antrą didžiausią masyvo reikšmę, nenaudojant sort funkcijos. (7 taškai)
 
-// let mas = [];
 
-
-
-// let x = 0; 
-// while(x == 0){ 
-//   x =  Math.random() * 10; 
-// } 
-// if (x % 2 === 0) {
-//     x = i
-// console.log(i)
-// }
-
-// let arr = [];
-// while(arr.length > 20 && arr.length < 30){
-// let r = Math.floor(Math.random() * 10) + 1;
-// if(arr.indexOf(r) === -1) arr.push(r);
-// console.log(arr)
-// }
-
-
-// generating a random number
-// const g = '';
-// sk7 = Math.random() * (10-1) + 1
-
-// console.log(`Random value between 1 and 10 is ${sk7}`);
-// console.log(Math.round(sk7))
-
-
-
-
-// const badMarkLimit = 5;
-// const mas = [];
-
-// for (let i = 0; i < marks.length; i++) {
-//     const mark = marks[i];
-//     if (mark <= badMarkLimit) {
-//         mas.push(mark);
-//     }
-//         // console.log(mark);
-//         // badMarks.push(mark);
-// }
-
-// console.log(mas);
-
-
+// Math.random() gali buti Math.ceil()
 let mas = Math.round(Math.random() * 10 + 20) 
 console.log('Masyvo ilgis -', mas);
-const masyv = [];
+let masyv = [];
 for (let i = 0; i < mas; i++) {
     const p = Math.round(Math.random() * 20 + 10);
     masyv.push(p);
 }
 console.log('Masyvas yra ', masyv);
+console.log('--------------------------------');
+
+let big;
+for (let i = 0; i < masyv.length; i++) { 
+    for(let j = i + 1; j < masyv.length; j++) {
+        if (masyv [i] > masyv [j]) {
+            big = masyv[i];
+            masyv [i] = masyv[j];
+            masyv[j] = big;
+
+        }
+    }
+}
+let ans = masyv[masyv.length-1];
+for (let z = masyv.length-1; z > 0 ; z--) { 
+if (ans > masyv [z]) {
+ans = masyv[z];
+break;
+}
+}
+
+console.log(`Masyvas su surusiuotomis reiksmemis yra`, masyv);
+console.log('--------------------------------');
+console.log(`Didziausia masyvo reiksme yra `, masyv[masyv.length-1]);
+console.log('--------------------------------');
+console.log(`Antra pagal dydi masyvo reiksme yra `, ans);
 
 
+console.log('--------------------------------');
 
+        
+console.log("6 uždavinis");
+let ag = Math.round(Math.random() * 10 + 20);
+console.log('Masyvo ilgis bus ', ag);
+console.log('--------------------------------');
+let cArray = [];
+for (let i = 0; i < ag; i++) {
+    const f = Math.round(Math.random() * 20 + 10);
+    cArray.push(f);
+}
+
+console.log('Masyvas yra ', cArray);
+console.log('--------------------------------');
 // let bigNumber = -Infinity;
 // let answer = -Infinity;
-// for (let i = 0; i < masyv.length; i++) {
-// if(masyv[i] > bigNumber){
+// for (let i = 0; i < cArray.length; i++) {
+// if(cArray[i] > bigNumber) {
 // answer = bigNumber;
-// bigNumber = masyv[i];    
+// bigNumber = cArray[i];
+
 // }    
+
 // }
 
 // if(isFinite(answer)){
-//   console.log(answer);  
+//   console.log(`Antra pagal dydi masyvo reiksme yra `, answer);  
 // } else {
-//     console.log("Masyve yra viena verte ", bigNumber);
+//    console.log("Masyve yra viena verte ", bigNumber);
 // }
 
+console.log('--------------------------------');
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  };
+const arrayL=getRndInteger(20,30);
+let nArray=[];
+for (let i=0;i<arrayL;i++){
+    nArray.push(getRndInteger(10,30));
+};
+const maxFromList=Math.max(...nArray);
+console.log(maxFromList);
 
 
 
-let biggest = 10;
- const mark = [];
-for (let i = 0; i < masyv.length; i++) { 
-    const n = masyv [i];
+console.log('*********--- 7. uzdavinys ---***********')
+
+//7. Sugeneruokite masyvą, kurio reikšmės atsitiktinės raidės A, B, C ir D, o ilgis 100. Suskaičiuokite kiek yra kiekvienos raidės. (7 taškai)
+
+
+const array = ['A', 'B', 'C', 'D'];
+    console.log(array);
+
+
+
+
+    console.log('--------------------------------');
+
+    const letterList=['A', 'B', 'C', 'D'];
+    const rList=[];
+    for (let i=0;i<100;i++){
+        rList.push(letterList[getRndInteger(0,4)]);
+    }
+
+    let count = {};
+    rList.forEach(function(i) { count[i] = (count[i]||0) + 1;});
     
-    if (typeof n === 'number' 
-    && isFinite(n) 
-    && n > biggest[masyv]) {
-        biggest = n; 
-        //mark.push(biggest);
+    console.log(rList);
+    console.log(count);
+
+
+console.log('*********--- 8. uzdavinys ---***********')
+
+//8. Parašyti funkciją - lygineSuma. Funkcijos parametrai - du kintamieji. Testų reikalavimai - abu kitamieji turi būti arba skaičiai arba masyvai(negali būti vienas skaičius, kitas masyvas).
+
+
+
+
+
+
+
+
+
+
+
+
+console.log('--------------------------------');
+
+function lygineSuma(a,b){
+    if(Number.isFinite(a) && Number.isFinite(b)){
+      if((a+b)%2===0){
+        console.log(`skaiciu ${a} ir ${b} suma lygine`);
+      }else{
+        console.log(`skaiciu ${a} ir ${b} suma nelygine`);
+      }
+     }
+    else if(Array.isArray(a) && Array.isArray(b)){
+        if((a.length+b.lengst)%2===0){
+            console.log(`masyvu ${a} ir ${b} ilgiu suma lygine`);
+          }else{
+            console.log(`masyvu ${a} ir ${b} ilgius suma nelygine`);
+          }
+     }
+     else{
+        console.log(`abu kintamieji turi buti masyvai arba skaicia`);
+     }
+};
+
+lygineSuma(1,2);
+lygineSuma("a",2);
+lygineSuma([1,1,1,1],[2]);
+
+
+
+console.log('*********--- 9. uzdavinys ---***********')
+// 9. Parašyti funkciją pirminisSkaicius. Funkcija turi vieną kintamąjį. Turi būti patikrinimas, kad kintamasis yra skaičius. Funkcija turi grąžinti ar pateiktas skaičius yra pirminis( pirminisskaičius yra tas, kuris dalinasi tik iš savęs ir tik iš vieneto be liekanos.) (10 taškų)
+ 
+    
+
+
+
+
+
+
+
+
+
+console.log('--------------------------------');
+function pirminisSkaicius(a){
+    if(Number.isFinite(a)){
+        if(a%1===0){
+            console.log("sakicius priminis");
+        }
+     }
+     else{
+        console.log(`Error: kintamasis '${a}' nėra skaičiaus tipo`);
+     }
+}
+
+pirminisSkaicius(1);
+pirminisSkaicius(3);
+pirminisSkaicius('a');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log('*********--- 10 uzdavinys ---***********')
+//10. Parašyti funkciją telefonoNumeris. Funkcija turi priimti vieną kintamąjį - masyvą. Masyvo elementai - skaičiai, ilgis - 10. Funkcija turi grąžinti telefono numerį tokiu formatu - "(XXX) XXX-XXXX". (10 taškų)
+
+
+
+
+
+
+
+
+console.log('--------------------------------');
+//(XXX) XXX-XXXX
+function telefonoNumeris(n){
+    if(Array.isArray(n) && n.length===10){
+        //(XXX) XXX-XXXX
+    console.log(`(${n[0]}${n[1]}${n[2]}) ${n[3]}${n[4]}${n[5]}-${n[6]}${n[7]}${n[8]}${n[9]}`);
+    }
+    else{
+        console.log('error bad iput')
     }
 }
 
-console.log(mark);
+telefonoNumeris([0,1,2,3,4,5,6,7,8,9]);
 
+
+
+
+
+function telNr(x){
+    return `(${x[0]}${x[1]}${x[2]}) ${x[3]}${x[4]}${x[5]}-${x[6]}${x[7]}${x[8]}${x[9]} `;
+    }
+    
+    console.log(telNr([1,1,1,1,1,1,1,1,1,1,]));
+
+
+
+
+
+
+
+
+ 
