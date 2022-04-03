@@ -480,6 +480,10 @@ function telefonoNumeris(n) {
     if (n.length !== 10) {
         return `ERROR: netinkamas elementu kiekis. Turi buti 10.`
     }
+    let i = 0;
+    if ( t[i] > 9) {
+          return `ERROR: elementai turi buti vienzenkliai skaiciai.`
+    }
     for (let i = 0; i < n.length; i++) {
         if (typeof n[i] !== `number`) {
             return `ERROR: bent vienas is elementu nera skaicius.`
