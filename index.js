@@ -480,13 +480,13 @@ function telefonoNumeris(n) {
     if (n.length !== 10) {
         return `ERROR: netinkamas elementu kiekis. Turi buti 10.`
     }
-    let i = 0;
-    if ( t[i] > 9) {
-          return `ERROR: elementai turi buti vienzenkliai skaiciai.`
-    }
+    
     for (let i = 0; i < n.length; i++) {
         if (typeof n[i] !== `number`) {
             return `ERROR: bent vienas is elementu nera skaicius.`
+        }
+        if ( t[i] > 9) {
+          return `ERROR: elementai turi buti vienzenkliai skaiciai.`
         }
     }
     return `(${n[0]}${n[1]}${n[2]}) ${n[3]}${n[4]}${n[5]}-${n[6]}${n[7]}${n[8]}${n[9]}`;
