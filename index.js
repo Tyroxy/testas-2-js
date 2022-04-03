@@ -485,8 +485,14 @@ function telefonoNumeris(n) {
         if (typeof n[i] !== `number`) {
             return `ERROR: bent vienas is elementu nera skaicius.`
         }
-        if ( t[i] > 9) {
+        if ( n[i] > 9) {
           return `ERROR: elementai turi buti vienzenkliai skaiciai.`
+        }
+        if (n[i] % 1 !== 0) {
+            return `ERROR: elementas yra ne sveikasis skaicius.`;
+        }
+        if (n[i] < 0) {
+            return `ERROR: elementas negali buti neigiamas skaicius.`;
         }
     }
     return `(${n[0]}${n[1]}${n[2]}) ${n[3]}${n[4]}${n[5]}-${n[6]}${n[7]}${n[8]}${n[9]}`;
